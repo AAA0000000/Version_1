@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Version_1</string>
+    <string name="input_image">Input Image</string>
+    <string name="perform_text_detection">Read Image</string>
+    <string name="ocr_results">OCR Results</string>
+    <string name="take_photo">Take Photo</string>
+</resources>
