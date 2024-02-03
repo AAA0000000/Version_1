@@ -31,7 +31,7 @@ class MainActivity : AppCompatActivity() {
     private var ortEnv: OrtEnvironment = OrtEnvironment.getEnvironment()
     private lateinit var ortSession: OrtSession
 
-    private var imageId = 0;
+    private var imageId = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
