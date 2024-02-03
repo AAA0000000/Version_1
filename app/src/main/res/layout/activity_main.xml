@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,19 +7,62 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <SurfaceView
-        android:id="@+id/surface_camera_preview"
+    <ImageView
+        android:id="@+id/image_view"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="4" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/horizontal_quarterline"
+        android:contentDescription="@string/add_photo" />
 
     <TextView
-        android:id="@+id/tv_result"
+        android:id="@+id/text_result"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
         android:gravity="center"
-        android:text="Hello World!"
-        android:textSize="18sp" />
+        android:text="@string/instruction_text"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/horizontal_quarterline"
+        app:layout_constraintBottom_toTopOf="@id/take_photo_button" />
 
-</LinearLayout>
+    <Button
+        android:id="@+id/take_photo_button"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:text="@string/take_photo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/vertical_centerline"/>
+
+    <Button
+        android:id="@+id/detect_text_button"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:text="@string/read_photo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/vertical_centerline"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vertical_centerline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".50" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/horizontal_quarterline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.75" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/horizontal_bottomline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="1" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,7 +1,10 @@
 <resources>
     <string name="app_name">Version_1</string>
     <string name="input_image">Input Image</string>
-    <string name="perform_text_detection">Read Image</string>
+    <string name="read_photo">Read Photo</string>
     <string name="ocr_results">OCR Results</string>
     <string name="take_photo">Take Photo</string>
+    <string name="set_photo">Set Photo</string>
+    <string name="add_photo">Add Photo</string>
+    <string name="instruction_text">Set Photo to add photo \nRead Photo to detect</string>
 </resources>
